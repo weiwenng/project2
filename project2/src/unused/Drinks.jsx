@@ -3,7 +3,7 @@ import { Button, Card } from "@mui/material"
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
 import dataArray from "../data";
-import DrinksCard from "../components/DrinksCard";
+import DrinksCard from "../unused/DrinksCard";
 // import BasicCard from "../components/BasicCard"
 
 const Drinks = ({ handleFavs }) => {

@@ -1,12 +1,10 @@
 import {
-  Box,
   Card,
   CardActions,
   CardMedia,
   CardContent,
   Button,
   Typography,
-  Chip,
 } from "@mui/material";
 import { FavoriteRounded, FavoriteBorderRounded } from "@mui/icons-material";
 import { useEffect, useState } from "react";

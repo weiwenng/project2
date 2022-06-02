@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
-import dataArray from '../data'
+import dataArray from './data'
 import Navbar from '../components/Navbar'
 import BasicCard from '../components/BasicCard'
 import { Button } from '@mui/material'
 import { useNavigate } from 'react-router'
 
-const MainEvents = ({handleFavs}) => {
+const MainEvents = ({ handleFavs }) => {
     const [data, setData] = useState(null)
     const navigate = useNavigate();
     const API_KEY = import.meta.env.VITE_API_KEY

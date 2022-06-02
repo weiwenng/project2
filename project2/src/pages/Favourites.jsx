@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar"
 import FavsCard from "../components/FavsCard"
 import { useState } from "react"
 
-const Favourites = ({favs}) => {
+const Favourites = ({removeFavs, favs}) => {
     // const [ link, setLink ] = useState([])
     const API_KEY = import.meta.env.VITE_API_KEY
     

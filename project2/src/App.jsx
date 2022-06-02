@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-import MainEvents from "./pages/MainEvents";
+import MainEvents from "./unused/MainEvents";
 import Drinks from "./pages/Drinks";
 import Favourites from "./pages/Favourites";
 import Detail from "./pages/Detail";
@@ -27,7 +27,9 @@ function App() {
     console.log(favs)
   }
   
-
+  const removeFavs = (num) => {
+    setFavs(favs.filter((item, index) => item.uuid !== num))
+  }
   return (
     <div className="App">
       <BrowserRouter>
@@ -35,7 +37,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/:dataset" element={<Main handleFavs={handleFavs} favs={favs} />} />
           <Route path="/:dataset/:id" element={<Detail />} />
-          <Route path="/favourites" element={<Favourites favs={favs}/>} />
+          <Route path="/favourites" element={<Favourites removeFavs={removeFavs} favs={favs}/>} />
           {/* <Route path="/things" element={<ToDo />} /> */}
           {/* <Route path="/event" element={<MainEvents handleFavs={handleFavs}/>} /> */}
           {/* <Route path="/events/:id" element={<EventDetail />} /> */}

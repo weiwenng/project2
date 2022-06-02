@@ -64,7 +64,7 @@ const Detail = () => {
                 : `nearest MRT station: ${detail?.nearestMrtStation}`}
             </Typography>
             <Typography sx={{ mb: 0.5 }} color="text.secondary">
-              {detail?.rating === "" ? "" : `rating: ${detail?.rating} / 5`}
+              {dataset === "event"|detail?.rating === "" ? "" : `rating: ${detail?.rating} / 5`}
               {/* {detail?.price === "" ? "" : detail?.price?.[0] === "$" ? `price: ${detail?.price}` : `price: $${detail?.price}`} */}
             </Typography>
             <Typography sx={{ mb: 0.5 }} color="text.secondary">
