@@ -1,26 +1,20 @@
-import { Link, useNavigate } from 'react-router-dom'
-import { Card, Box, CardContent, Typography } from '@mui/material';
-import { EventOutlined, LocalDiningRounded, Hotel, Hiking, ForestRounded, LocalBarRounded, FavoriteBorderRounded, HotelRounded } from '@mui/icons-material'
-// import Navbar from "../components/Navbar";
-// import dataArray from "../data";
-// import MainEvents from "./MainEvents";
+import { useNavigate } from 'react-router-dom'
+import { Card, CardContent, Typography } from '@mui/material';
+import { EventOutlined, LocalDiningRounded, Hotel, ForestRounded, LocalBarRounded, FavoriteBorderRounded, HotelRounded } from '@mui/icons-material'
 
 const Home = () => {
     const navigate = useNavigate()
     return (
         <>
-
-            {/* <MainEvents /> */}
             <nav className="home">
                 <img id="sunnyicon" src="https://www.iconpacks.net/icons/2/free-sun-icon-1846-thumb.png" alt="sun" height="35" />{" "}
                 <h1>Sunny Island</h1>
             </nav>
-            {/* <Card sx={{ padding: 2, maxWidth: 275 }}> */}
             <div className="icon-list">
                 <Card className="card" onClick={() => navigate("/event")}>
                     <CardContent>
                         <Typography>
-                            <EventOutlined onClick={() => navigate("/event")} sx={{ fontSize: 60 }} />
+                            <EventOutlined sx={{ fontSize: 60 }} />
                         </Typography>
                         <Typography>
                             doStuff
@@ -85,3 +79,7 @@ const Home = () => {
 }
 
 export default Home;
+
+// import Navbar from "../components/Navbar";
+// import dataArray from "../data";
+// import MainEvents from "./MainEvents";

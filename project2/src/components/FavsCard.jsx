@@ -6,56 +6,50 @@ import {
   Button,
   Typography,
 } from "@mui/material";
-import { FavoriteRounded, FavoriteBorderRounded } from "@mui/icons-material";
+import { FavoriteRounded } from "@mui/icons-material";
 import { useEffect, useState } from "react";
-const FavsCard = ({ id, dataset }) => {
+import { Link } from "react-router-dom"
+const FavsCard = ({ id, dataset, removeFavs }) => {
   const [detail, setDetail] = useState([]);
   const API_KEY = import.meta.env.VITE_API_KEY;
+
   useEffect(() => {
-       fetch(
+    fetch(
       `https://tih-api.stb.gov.sg/content/v1/${dataset.includes("_") ? dataset.replace("_", "-") : dataset}?uuid=${id}&language=en&apikey=${API_KEY}`
     )
       .then((response) => response.json())
       .then((data) => {
         setDetail(data);
-        console.log(data);
+        console.log("detail", data);
       });
   }, [id]);
+
+  const imgsource =
+    detail?.data?.[0].images?.[0]?.url === ""
+      ? `https://tih-api.stb.gov.sg/media/v1/download/uuid/${detail?.data?.[0].images?.[0]?.uuid}?apikey=${API_KEY}`
+      : `${detail?.data?.[0].images?.[0]?.url}`;
 
   return (
     <>
       <Card sx={{ maxWidth: 275 }}>
-        {/* <CardMedia
-                    // onClick={handleClick}
-                    component="img"
-                    width="25"
-                    height="200"
-                    // image={item?.images[0]?.url === "" ? `https://tih-api.stb.gov.sg/media/v1/download/uuid/${item.images[0]?.uuid}?apikey=${API_KEY}` : `${item?.images[0]?.url}`}
-                    image={item?.images.length === 0 ? "https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2016/05/gf70r2-1.jpg" : imgsource}
-                    alt={item.name}
-                /> */}
+        <CardMedia // onClick={handleClick}
+          component="img"
+          width="25"
+          height="200"
+          image={detail?.data?.[0].images.length === 0 ? "https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2016/05/gf70r2-1.jpg" : imgsource}
+          alt={detail?.data?.[0].name}
+        />
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             {detail?.data?.[0].name}
           </Typography>
         </CardContent>
         <CardActions>
-          {/* <Link to={`/nightlife/${item.uuid}`}> */}
-          {/* <Link to={`${item.name}`}> */}
-          <Button size="small">See More</Button>
-          {/* </Link> */}
-          {/* {like === true ? <FavoriteBorderRounded onClick={handleClick} /> : <FavoriteRounded onClick={handleClick} />} */}
+          <Link to={`/${dataset}/${detail?.data?.[0].uuid}`}>
+            <Button size="small">See More</Button>
+          </Link>
+          <FavoriteRounded onClick={() => removeFavs(id)} />
         </CardActions>
-        {/* {check === true | like === false ?
-          // {like === true ?
-          ( */}
-            <FavoriteRounded/>
-          {/* ) : (
-            <FavoriteBorderRounded onClick={handleClick} />
-          )} */}
-        {/* <Stack>
-                {item.tags.map((tag) => <Chip label={tag} size="small" />)}
-            </Stack> */}
       </Card>
     </>
   );
@@ -63,22 +57,27 @@ const FavsCard = ({ id, dataset }) => {
 
 export default FavsCard;
 
- // if (dataset === "event") {
-    //   fetch(
-    //     `https://tih-api.stb.gov.sg/content/v1/${dataset.includes("_") ? dataset.replace("_", "-") : dataset}?uuid=${id}&language=en&apikey=${API_KEY}`
-    //   )
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //       setDetail(data?.data);
-    //       console.log(detail);
-    //     });
-    // } else if (dataset === "bars_clubs") {
-    //   fetch(
-    //     `https://tih-api.stb.gov.sg/content/v1/bars-clubs?uuid=${id}&language=en&apikey=${API_KEY}`
-    //   )
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //       setDetail(data?.data?.[0]);
-    //       console.log(detail);
-    //     });
-    // }
+// if (dataset === "event") {
+//   fetch(
+//     `https://tih-api.stb.gov.sg/content/v1/${dataset.includes("_") ? dataset.replace("_", "-") : dataset}?uuid=${id}&language=en&apikey=${API_KEY}`
+//   )
+//     .then((response) => response.json())
+//     .then((data) => {
+//       setDetail(data?.data);
+//       console.log(detail);
+//     });
+// } else if (dataset === "bars_clubs") {
+//   fetch(
+//     `https://tih-api.stb.gov.sg/content/v1/bars-clubs?uuid=${id}&language=en&apikey=${API_KEY}`
+//   )
+//     .then((response) => response.json())
+//     .then((data) => {
+//       setDetail(data?.data?.[0]);
+//       console.log(detail);
+//     });
+// }
+
+{/* <Stack>
+                {item.tags.map((tag) => <Chip label={tag} size="small" />)}
+            </Stack> */}
+            // image={detail?.data?.[0].images?.[0]?.url === "" ? `https://tih-api.stb.gov.sg/media/v1/download/uuid/${detail?.data?.[0].images?.[0].uuid}?apikey=${API_KEY}` : `${detail?.data?.[0].images?.[0]?.url}`}

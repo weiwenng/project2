@@ -4,11 +4,9 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import BasicCard from "../components/BasicCard";
 import datasetArray from "../dataset";
-// import dataArray from "../data";
-// import DrinksCard from "../unused/DrinksCard";
 
-const Main = ({ favs, handleFavs }) => {
-  // const [ like, setLike ] = useState(true)
+
+const Main = ({ favs, handleFavs, removeFavs }) => {
   const { dataset } = useParams();
   const [data, setData] = useState(null);
   const [header, setHeader] = useState(null);
@@ -16,8 +14,6 @@ const Main = ({ favs, handleFavs }) => {
   const API_KEY = import.meta.env.VITE_API_KEY;
 
   let keyword = "";
-  // let header = ""
-  // const getKeyword = () => {
   useEffect(() => {
     for (let i = 0; i < datasetArray.length; i++) {
       if (dataset === datasetArray[i].dataset) {
@@ -27,8 +23,7 @@ const Main = ({ favs, handleFavs }) => {
       }
     }
     fetch(
-      `https://tih-api.stb.gov.sg/content/v1/${
-        dataset.includes("_") ? dataset.replace("_", "-") : dataset
+      `https://tih-api.stb.gov.sg/content/v1/${dataset.includes("_") ? dataset.replace("_", "-") : dataset
       }/search?keyword=${keyword}&language=en&apikey=${API_KEY}`
     )
       .then((response) => response.json())
@@ -51,12 +46,11 @@ const Main = ({ favs, handleFavs }) => {
       <div className="card-list">
         {data?.map((item, index) => (
           <BasicCard
+            removeFavs={removeFavs}
             handleFavs={handleFavs}
             key={index}
-            id={item.uuid}
             item={item}
             favs={favs}
-            dataset={dataset}
           />
         ))}
       </div>
@@ -75,3 +69,13 @@ export default Main;
 
 // }
 // getKeyword()
+         // dataset={dataset}
+            // check={check}
+            // setCheck={setCheck}
+            // id={item.uuid}
+
+            // import dataArray from "../data";
+// import DrinksCard from "../unused/DrinksCard";
+
+  // const [ like, setLike ] = useState(true)
+  // const [check, setCheck] = useState(null)
