@@ -16,9 +16,11 @@ const Navbar = () => {
             <Link to="/cruises"> <div className="navicon"><DirectionsBoat sx={{ fontSize: 20 }} /></div> Cruises</Link>
             <Link to="/walking_trail"> <div className="navicon"><ForestRounded sx={{ fontSize: 20 }} /></div> Walk-Walk</Link>
             <Link to="/accommodation"> <div className="navicon"><Hotel sx={{ fontSize: 20 }} /></div> Accoms</Link>
-            <FavoriteBorderRounded sx={{ position: "absolute", right: 0, paddingRight: 3 }} onClick={() => navigate("/favourites")} />
+            <FavoriteBorderRounded className="navFav"  onClick={() => navigate("/favourites")} />
         </nav>
     )
 }
 
 export default Navbar;
+
+// sx = {{ position: "absolute", right: 0, paddingRight: 3 }}

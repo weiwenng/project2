@@ -30,6 +30,12 @@ nav a {
   text-decoration: none;
 }
 
+.navFav {
+  position: absolute; 
+  padding-right: 3rem;
+  right: 0;
+}
+
 .icon-list {
   display: grid;
   grid-gap: 1rem;
@@ -105,4 +111,15 @@ nav a {
 
 .navicon {
   text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  nav {
+    overflow: auto;
+    white-space: nowrap;
+  }
+  .navFav {
+    position: relative;
+  }
 }
