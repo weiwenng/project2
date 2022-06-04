@@ -2,19 +2,19 @@
 // https://tih-api.stb.gov.sg/content/v1/search/all?dataset=${dataset}&language=en&apikey=${API_KEY}
 
 const dataArray = [
-  [
-    "accommodation",
-    "attractions",
-    "bars_clubs",
-    "cruises",
-    "event",
-    "food_beverages",
-    "precincts",
-    "shops",
-    "tour",
-    "venue",
-    "walking_trail",
-  ],
+  // [
+  //   "accommodation",
+  //   "attractions",
+  //   "bars_clubs",
+  //   "cruises",
+  //   "event",
+  //   "food_beverages",
+  //   "precincts",
+  //   "shops",
+  //   "tour",
+  //   "venue",
+  //   "walking_trail",
+  // ],
   {
     accommodation: [
       "Backpacker Hostels",

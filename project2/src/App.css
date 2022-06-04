@@ -7,7 +7,7 @@ nav {
 }
 
 .home {
-  height: 10rem;
+  height: 5rem;
   display: flex;
   font-size: 1.5em;
   justify-content: center;
@@ -95,3 +95,11 @@ nav a {
 .card-list a:hover {
   color: blue;
 }
+
+.search-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 1rem;
+}
+

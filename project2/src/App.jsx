@@ -8,7 +8,7 @@ import Main from "./pages/Main";
 
 function App() {
   const [favs, setFavs] = useState([])
-  const handleFavs = (dataset,id) => {
+  const handleFavs = (dataset, id) => {
     setFavs([...favs, {
       dataset: dataset,
       id: id,
@@ -16,7 +16,7 @@ function App() {
     console.log("test")
     console.log(favs)
   }
-  
+
   const removeFavs = (num) => {
     setFavs(favs.filter((item, index) => item.id !== num))
   }
@@ -24,10 +24,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home handleFavs={handleFavs} removeFavs={removeFavs} favs={favs} />} />
           <Route path="/:dataset" element={<Main handleFavs={handleFavs} favs={favs} removeFavs={removeFavs} />} />
           <Route path="/:dataset/:id" element={<Detail />} />
-          <Route path="/favourites" element={<Favourites removeFavs={removeFavs} favs={favs}/>} />
+          <Route path="/favourites" element={<Favourites removeFavs={removeFavs} favs={favs} />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -46,8 +46,8 @@ export default App;
 //     </Routes>
 //   </BrowserRouter>
 //   </div >
-      // index: index
-      // clicked: clicked,
+// index: index
+// clicked: clicked,
 {/* <Route path="/things" element={<ToDo />} /> */ }
 {/* <Route path="/event" element={<MainEvents handleFavs={handleFavs}/>} /> */ }
 {/* <Route path="/events/:id" element={<EventDetail />} /> */ }

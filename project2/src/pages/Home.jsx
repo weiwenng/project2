@@ -1,8 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 import { Card, CardContent, Typography } from '@mui/material';
 import { EventOutlined, LocalDiningRounded, Hotel, ForestRounded, LocalBarRounded, FavoriteBorderRounded, HotelRounded } from '@mui/icons-material'
+import Search from '../components/Search';
 
-const Home = () => {
+const Home = ({favs, removeFavs, handleFavs}) => {
     const navigate = useNavigate()
     return (
         <>
@@ -71,6 +72,9 @@ const Home = () => {
                         </Typography>
                     </CardContent>
                 </Card>
+            </div>
+            <div className="search">
+                <Search favs={favs} handleFavs={handleFavs} removeFavs={removeFavs}/>
             </div>
             {/* </Card> */}
 

@@ -51,9 +51,9 @@ export default function BasicCard({ favs, handleFavs, item, removeFavs }) {
 }
 
 // const [id, setId] = useState("")
-  // const [like, setLike] = useState(true);
-  // const [check, setCheck ] = useState(null)
-  // const imgsource = item.url === "" ? `https://tih-api.stb.gov.sg/media/v1/download/uuid/${item.images[0]?.uuid}?apikey=${API_KEY}` : `${item.url}`
+// const [like, setLike] = useState(true);
+// const [check, setCheck ] = useState(null)
+// const imgsource = item.url === "" ? `https://tih-api.stb.gov.sg/media/v1/download/uuid/${item.images[0]?.uuid}?apikey=${API_KEY}` : `${item.url}`
 {/* <Stack>
           {item.tags.map((tag) => <Chip label={tag} size="small" />)}
       </Stack> */}
