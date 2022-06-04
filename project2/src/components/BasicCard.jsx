@@ -18,7 +18,7 @@ export default function BasicCard({ favs, handleFavs, item, removeFavs }) {
       : `${item?.images[0]?.url}`;
   return (
     <Card className="basic" sx={{ maxWidth: 275 }}>
-      <CardMedia  // onClick={handleClick}
+      <CardMedia className="basicImg"  // onClick={handleClick}
         component="img"
         width="25"
         height="200"

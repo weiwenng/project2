@@ -122,4 +122,8 @@ nav a {
   .navFav {
     position: relative;
   }
+  .basic {
+    margin: auto;
+}
+
 }
