@@ -13,7 +13,7 @@ const Detail = () => {
   const { dataset, id } = useParams();
   const [detail, setDetail] = useState([]);
   const navigate = useNavigate();
-  const API_KEY = import.meta.env.VITE_API_KEY;
+  const API_KEY = "GnloiEy5Obcp0Z0dDikvxUf6krTNEQtF"
   
   useEffect(() => {
     fetch(

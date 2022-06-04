@@ -10,7 +10,7 @@ const Search = ({ favs, handleFavs, removeFavs }) => {
     const [valueCat, setValueCat] = useState()
     const [types, setTypes] = useState()
     const [search, setSearch] = useState()
-    const API_KEY = import.meta.env.VITE_API_KEY;
+    const API_KEY = "GnloiEy5Obcp0Z0dDikvxUf6krTNEQtF"
     useEffect(() => {
         fetch(`https://tih-api.stb.gov.sg/content/v1/datasets?apikey=${API_KEY}`)
             .then((response) => response.json())

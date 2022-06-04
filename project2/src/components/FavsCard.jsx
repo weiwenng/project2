@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 const FavsCard = ({ id, dataset, removeFavs }) => {
   const [detail, setDetail] = useState([]);
-  const API_KEY = import.meta.env.VITE_API_KEY;
+  const API_KEY = "GnloiEy5Obcp0Z0dDikvxUf6krTNEQtF"
 
   useEffect(() => {
     fetch(
