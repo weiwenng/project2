@@ -33,8 +33,8 @@ const Search = ({ favs, handleFavs, removeFavs }) => {
 
     return (
         <>
-            <Stack sx={{  margin: "auto" }}>
-                <br/>
+            <Stack sx={{ margin: "auto" }}>
+                <br />
                 <Autocomplete
                     disablePortal
                     id="categories"
@@ -54,7 +54,7 @@ const Search = ({ favs, handleFavs, removeFavs }) => {
                 <h1>{value}</h1> */}
                         <br />
                         <Autocomplete
-                    
+
                             disablePortal
                             id="types"
                             options={types}
@@ -76,9 +76,9 @@ const Search = ({ favs, handleFavs, removeFavs }) => {
                         }}>Search</Button>
 
                         {search && (
-                        <div className="search-list">
-                        {search?.map((item, index) => <BasicCard className="search" key={index} item={item} favs={favs} handleFavs={handleFavs} removeFavs={removeFavs} />)}
-                        </div>)
+                            <div className="search-list">
+                                {search?.map((item, index) => <BasicCard className="search" key={index} item={item} favs={favs} handleFavs={handleFavs} removeFavs={removeFavs} />)}
+                            </div>)
                             // <SearchResults search={search} favs={favs} handleFavs={handleFavs} removeFavs={removeFavs}/>
                         }
                     </>
