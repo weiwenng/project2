@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Card, CardContent, Typography } from '@mui/material';
-import { EventOutlined, LocalDiningRounded, Hotel, ForestRounded, LocalBarRounded, FavoriteBorderRounded, HotelRounded } from '@mui/icons-material'
+import { EventOutlined, LocalDiningRounded, Hotel, ForestRounded, LocalBarRounded, FavoriteBorderRounded, DirectionsBoat, LocationOnRounded } from '@mui/icons-material'
 import Search from '../components/Search';
 
 const Home = ({favs, removeFavs, handleFavs}) => {
@@ -32,6 +32,16 @@ const Home = ({favs, removeFavs, handleFavs}) => {
                         </Typography>
                     </CardContent>
                 </Card>
+                <Card className="card" onClick={() => navigate("/venue")}>
+                    <CardContent>
+                        <Typography>
+                            <LocationOnRounded sx={{ fontSize: 60 }} />
+                        </Typography>
+                        <Typography>
+                            venue
+                        </Typography>
+                    </CardContent>
+                </Card>
                 <Card className="card" onClick={() => navigate("/food_beverages")}>
                     <CardContent>
                         <Typography>
@@ -39,6 +49,16 @@ const Home = ({favs, removeFavs, handleFavs}) => {
                         </Typography>
                         <Typography>
                             yumCha
+                        </Typography>
+                    </CardContent>
+                </Card>
+                <Card className="card" onClick={() => navigate("/cruises")}>
+                    <CardContent>
+                        <Typography>
+                            <DirectionsBoat sx={{ fontSize: 60 }} />
+                        </Typography>
+                        <Typography>
+                            cruises
                         </Typography>
                     </CardContent>
                 </Card>

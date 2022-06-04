@@ -87,7 +87,7 @@ const datasetArray = [
   {
     dataset: "tour",
     urlvalue: "tour",
-    search: "",
+    search: "tour",
     header: "Tours",
     selection: [
       "Adventure & Sports",
@@ -104,6 +104,8 @@ const datasetArray = [
   {
     dataset: "venue",
     urlvalue: "venue",
+    search: "Arts%20%26%20Entertainment%2C%20MICE%2C%20Sports%2C%20Others",
+    header: "Venue",
     selection: ["Arts & Entertainment", "MICE", "Sports", "Others"],
   },
   {
