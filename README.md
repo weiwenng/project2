@@ -33,6 +33,9 @@ You will need to register a developers account / businesses account to use their
 #### Display Page
 ![WireFrame - Display](https://user-images.githubusercontent.com/103851181/172045491-8ce7b7b2-4a11-4dd1-b179-11abe0adc175.jpg)
 
+#### Details Page
+![WireFrame - Details](https://user-images.githubusercontent.com/103851181/172048754-f19ce7fa-c3b9-4be4-8bf4-0d2e13610348.jpg)
+
 ## User Stories
 
 User must be able to: 
