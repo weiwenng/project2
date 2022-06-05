@@ -23,7 +23,7 @@ Website created using Vite and Material-UI using data fetched from [Tourism Info
 
 ## Tourism Info Hub API
 
-You will need to register a developers account / businesses account to use their API. [Click here to go to their portal.] (https://tih.stb.gov.sg/content/tih/en/home.html)
+You will need to register a developers account / businesses account to use their API. [Click here to go to their portal.](https://tih.stb.gov.sg/content/tih/en/home.html)
 
 ## WireFrames
 
