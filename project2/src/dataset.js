@@ -17,8 +17,7 @@ const datasetArray = [
   {
     dataset: "attractions",
     urlvalue: "attractions",
-    search:
-      "Adventure%2C%20Arts%2C%20Fitness%20and%20Holistic%20Wellness%2C%20History%20%26%20Culture%2C%20Leisure%20%26%20Recreation%2C%20Nature%20%26%20Wildlife%2C%20Others",
+    search:"Attractions",
     header: "Attractions",
     selection: [
       "Adventure",
@@ -74,7 +73,7 @@ const datasetArray = [
   {
     dataset: "shops",
     urlvalue: "shops",
-    search: "",
+    search: "shops",
     header: "Shopping",
     selection: [
       "Bazaars & Flea Markets",

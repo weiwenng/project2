@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Card, CardContent, Typography } from '@mui/material';
-import { EventOutlined, LocalDiningRounded, Hotel, ForestRounded, LocalBarRounded, FavoriteBorderRounded, DirectionsBoat, LocationOnRounded } from '@mui/icons-material'
+import { EventOutlined, LocalDiningRounded, ShoppingCartRounded, Attractions, Hotel, ForestRounded, LocalBarRounded, FavoriteBorderRounded, DirectionsBoat, LocationOnRounded, TourRounded } from '@mui/icons-material'
 import Search from '../components/Search';
 
 const Home = ({favs, removeFavs, handleFavs}) => {
@@ -12,6 +12,26 @@ const Home = ({favs, removeFavs, handleFavs}) => {
                 <h1>Sunny Island</h1>
             </nav>
             <div className="icon-list">
+                <Card className="card" onClick={() => navigate("/bars_clubs")}>
+                    <CardContent>
+                        <Typography>
+                            <LocalBarRounded sx={{ fontSize: 60 }} />
+                        </Typography>
+                        <Typography>
+                            chillDrink
+                        </Typography>
+                    </CardContent>
+                </Card>
+                <Card className="card" onClick={() => navigate("/attractions")}>
+                    <CardContent>
+                        <Typography>
+                            <Attractions sx={{ fontSize: 60 }} />
+                        </Typography>
+                        <Typography>
+                            seeStuff
+                        </Typography>
+                    </CardContent>
+                </Card>
                 <Card className="card" onClick={() => navigate("/event")}>
                     <CardContent>
                         <Typography>
@@ -22,23 +42,13 @@ const Home = ({favs, removeFavs, handleFavs}) => {
                         </Typography>
                     </CardContent>
                 </Card>
-                <Card className="card" onClick={() => navigate("/walking_trail")}>
+                <Card className="card" onClick={() => navigate("/shops")}>
                     <CardContent>
                         <Typography>
-                            <ForestRounded sx={{ fontSize: 60 }} />
+                            <ShoppingCartRounded sx={{ fontSize: 60 }} />
                         </Typography>
                         <Typography>
-                            walkWalk
-                        </Typography>
-                    </CardContent>
-                </Card>
-                <Card className="card" onClick={() => navigate("/venue")}>
-                    <CardContent>
-                        <Typography>
-                            <LocationOnRounded sx={{ fontSize: 60 }} />
-                        </Typography>
-                        <Typography>
-                            venue
+                            buyStuff
                         </Typography>
                     </CardContent>
                 </Card>
@@ -52,6 +62,8 @@ const Home = ({favs, removeFavs, handleFavs}) => {
                         </Typography>
                     </CardContent>
                 </Card>
+
+       
                 <Card className="card" onClick={() => navigate("/cruises")}>
                     <CardContent>
                         <Typography>
@@ -62,13 +74,13 @@ const Home = ({favs, removeFavs, handleFavs}) => {
                         </Typography>
                     </CardContent>
                 </Card>
-                <Card className="card" onClick={() => navigate("/bars_clubs")}>
+                <Card className="card" onClick={() => navigate("/walking_trail")}>
                     <CardContent>
                         <Typography>
-                            <LocalBarRounded sx={{ fontSize: 60 }} />
+                            <ForestRounded sx={{ fontSize: 60 }} />
                         </Typography>
                         <Typography>
-                            chillDrink
+                            walkWalk
                         </Typography>
                     </CardContent>
                 </Card>
@@ -79,6 +91,26 @@ const Home = ({favs, removeFavs, handleFavs}) => {
                         </Typography>
                         <Typography>
                             goodNight
+                        </Typography>
+                    </CardContent>
+                </Card>
+                <Card className="card" onClick={() => navigate("/venue")}>
+                    <CardContent>
+                        <Typography>
+                            <LocationOnRounded sx={{ fontSize: 60 }} />
+                        </Typography>
+                        <Typography>
+                            venue
+                        </Typography>
+                    </CardContent>
+                </Card>
+                <Card className="card" onClick={() => navigate("/tour")}>
+                    <CardContent>
+                        <Typography>
+                            <TourRounded sx={{ fontSize: 60 }} />
+                        </Typography>
+                        <Typography>
+                            tours
                         </Typography>
                     </CardContent>
                 </Card>
