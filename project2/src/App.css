@@ -84,6 +84,7 @@ nav a {
 .basic:hover {
   transform: translate3D(0, -1px, 0) scale(1.1);
   background-color: rgb(249, 188, 123);
+  transition: transform 0.5s
 }
 
 .header {
