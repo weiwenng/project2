@@ -114,13 +114,14 @@ nav a {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1050px) {
   nav {
     overflow: auto;
     white-space: nowrap;
   }
   .navFav {
     position: relative;
+    padding-left: 20px;
   }
   .basic {
     margin: auto;
