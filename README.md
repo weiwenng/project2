@@ -10,7 +10,7 @@ Website created using Vite and Material-UI using data fetched from [Tourism Info
 
 ## Features
 
-* Provides relevant Singapore destination information to visitors to facilitate planning
+* Provides relevant Singapore destination information to Singaporeans or overseas visitors to facilitate planning
     * Upcoming Events
     * Accommodation, Bars & Clubs, Food & Beverages
     * Walking Trails, Attractions, Cruises
@@ -70,3 +70,8 @@ User must be able to:
    * events that happen within selected date range will be displayed
 * Details - Add Tags & Filter by Tags
    * Click on Tags to see everything tagged with this /:tags
+
+## Credits
+
+* Sun Icon from Icon Packs
+* [Tourism Info Hub (TIH)](https://tih-dev.stb.gov.sg/content-api/apis)
