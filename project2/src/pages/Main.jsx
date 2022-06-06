@@ -11,7 +11,8 @@ const Main = ({ favs, handleFavs, removeFavs }) => {
   const [data, setData] = useState(null);
   const [header, setHeader] = useState(null);
   const navigate = useNavigate();
-  const API_KEY = "GnloiEy5Obcp0Z0dDikvxUf6krTNEQtF"
+  const API_KEY = import.meta.env.VITE_API_KEY
+  // const API_KEY = "GnloiEy5Obcp0Z0dDikvxUf6krTNEQtF"
 
   let keyword = "";
   useEffect(() => {

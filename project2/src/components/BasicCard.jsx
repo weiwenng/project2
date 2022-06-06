@@ -11,7 +11,8 @@ import {
 import { FavoriteBorderRounded, FavoriteRounded } from "@mui/icons-material";
 
 export default function BasicCard({ favs, handleFavs, item, removeFavs }) {
-  const API_KEY = "GnloiEy5Obcp0Z0dDikvxUf6krTNEQtF"
+  const API_KEY = import.meta.env.VITE_API_KEY
+  // const API_KEY = "GnloiEy5Obcp0Z0dDikvxUf6krTNEQtF"
   const imgsource =
     item?.images[0]?.url === ""
       ? `https://tih-api.stb.gov.sg/media/v1/download/uuid/${item.images[0]?.uuid}?apikey=${API_KEY}`
