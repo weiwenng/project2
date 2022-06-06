@@ -13,7 +13,7 @@ function App() {
       dataset: dataset,
       id: id,
     }])
-    console.log("test")
+    console.log("testing")
     console.log(favs)
   }
 
