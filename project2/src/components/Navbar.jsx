@@ -13,7 +13,7 @@ const Navbar = () => {
             <Link to="/bars_clubs"> <div className="navicon"><LocalBarRounded sx={{ fontSize: 20 }} /></div> NightLife</Link>
             <Link to="/attractions"> <div className="navicon"><Attractions sx={{ fontsize: 20}} /></div> Attractions</Link>
             <Link to="/event"> <div className="navicon"><EventOutlined sx={{ fontSize: 20 }} /></div> Events</Link>
-            <Link to="/shop"> <div className="navicon"><ShoppingCartRounded sx={{ fontSize: 20}} /></div> Shops</Link>
+            <Link to="/shops"> <div className="navicon"><ShoppingCartRounded sx={{ fontSize: 20}} /></div> Shops</Link>
             <Link to="/food_beverages"> <div className="navicon"><LocalDiningRounded sx={{ fontSize: 20 }} /></div> Dining</Link>
             <Link to="/cruises"> <div className="navicon"><DirectionsBoat sx={{ fontSize: 20 }} /></div> Cruises</Link>
             <Link to="/walking_trail"> <div className="navicon"><ForestRounded sx={{ fontSize: 20 }} /></div> Walk-Walk</Link>
