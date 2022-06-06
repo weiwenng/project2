@@ -1,5 +1,4 @@
 const datasetArray = [
-  // dataset : inside url
   {
     dataset: "accommodation",
     urlvalue: "accommodation",

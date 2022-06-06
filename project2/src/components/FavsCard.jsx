@@ -12,7 +12,6 @@ import { Link } from "react-router-dom"
 const FavsCard = ({ id, dataset, removeFavs }) => {
   const [detail, setDetail] = useState([]);
   const API_KEY = import.meta.env.VITE_API_KEY
-  // const API_KEY = "GnloiEy5Obcp0Z0dDikvxUf6krTNEQtF"
 
   useEffect(() => {
     fetch(
@@ -57,28 +56,3 @@ const FavsCard = ({ id, dataset, removeFavs }) => {
 };
 
 export default FavsCard;
-
-// if (dataset === "event") {
-//   fetch(
-//     `https://tih-api.stb.gov.sg/content/v1/${dataset.includes("_") ? dataset.replace("_", "-") : dataset}?uuid=${id}&language=en&apikey=${API_KEY}`
-//   )
-//     .then((response) => response.json())
-//     .then((data) => {
-//       setDetail(data?.data);
-//       console.log(detail);
-//     });
-// } else if (dataset === "bars_clubs") {
-//   fetch(
-//     `https://tih-api.stb.gov.sg/content/v1/bars-clubs?uuid=${id}&language=en&apikey=${API_KEY}`
-//   )
-//     .then((response) => response.json())
-//     .then((data) => {
-//       setDetail(data?.data?.[0]);
-//       console.log(detail);
-//     });
-// }
-
-{/* <Stack>
-                {item.tags.map((tag) => <Chip label={tag} size="small" />)}
-            </Stack> */}
-            // image={detail?.data?.[0].images?.[0]?.url === "" ? `https://tih-api.stb.gov.sg/media/v1/download/uuid/${detail?.data?.[0].images?.[0].uuid}?apikey=${API_KEY}` : `${detail?.data?.[0].images?.[0]?.url}`}

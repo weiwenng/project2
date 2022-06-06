@@ -12,7 +12,6 @@ const Main = ({ favs, handleFavs, removeFavs }) => {
   const [header, setHeader] = useState(null);
   const navigate = useNavigate();
   const API_KEY = import.meta.env.VITE_API_KEY
-  // const API_KEY = "GnloiEy5Obcp0Z0dDikvxUf6krTNEQtF"
 
   let keyword = "";
   useEffect(() => {
@@ -60,23 +59,3 @@ const Main = ({ favs, handleFavs, removeFavs }) => {
 };
 export default Main;
 
-// console.log(`https://tih-api.stb.gov.sg/content/v1/${dataset.includes("_") ? dataset.replace("_", "-") : dataset}/search/keyword=${keyword}&language=en&apikey=${API_KEY}`)
-// const handleClick = (event) => {
-//     // console.log(event.target.id)
-//     setLike(!like)
-//     // handleFavs(item.dataset, item.uuid)
-//     console.log(like)
-// }
-
-// }
-// getKeyword()
-         // dataset={dataset}
-            // check={check}
-            // setCheck={setCheck}
-            // id={item.uuid}
-
-            // import dataArray from "../data";
-// import DrinksCard from "../unused/DrinksCard";
-
-  // const [ like, setLike ] = useState(true)
-  // const [check, setCheck] = useState(null)

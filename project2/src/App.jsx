@@ -35,32 +35,3 @@ function App() {
 }
 
 export default App;
-
-// < div className = "App" >
-//   <BrowserRouter>
-//     <Routes>
-//       <Route path="/" element={<Home />} />
-//       <Route path="/events" element={<MainEvents />} />
-//       <Route path="/events/:item" element={<EventDetail />} />
-//       <Route path="/filter/:tag" element={<FilterTag />} />
-//     </Routes>
-//   </BrowserRouter>
-//   </div >
-// index: index
-// clicked: clicked,
-{/* <Route path="/things" element={<ToDo />} /> */ }
-{/* <Route path="/event" element={<MainEvents handleFavs={handleFavs}/>} /> */ }
-{/* <Route path="/events/:id" element={<EventDetail />} /> */ }
-{/* <Route path="/bars_clubs" element={<Drinks handleFavs={handleFavs}/>}/> */ }
-{/* <Route path="/nightlife/:id" element={<DrinksDetail/>} /> */ }
-{/* </Route> */ }
-{/* <Route path="/filter/:tag" element={<FilterTag />} /> */ }
-  // const [count, setCount] = useState(0);
-  // const [data, setData] = useState(null)
-  // save the ID in state
-  // import Drinks from "./pages/Drinks";
-// import MainEvents from "./pages/MainEvents";
-// import EventDetail from "./unused/EventDetail";
-// import FilterTag from "./pages/FilterTag";
-// import ToDo from "./pages/ToDo";
-// import DrinksDetail from "./unused/DrinksDetail";

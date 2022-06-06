@@ -26,5 +26,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-
-// sx = {{ position: "absolute", right: 0, paddingRight: 3 }}
