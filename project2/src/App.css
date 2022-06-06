@@ -1,3 +1,8 @@
+/* .App {
+  cursor: url("https://i.imgur.com/OPyQDTr.png?2"), auto;
+} */
+
+
 nav {
   background: rgb(255, 148, 33);
   color: white;
@@ -20,6 +25,7 @@ nav h1 {
   margin: 0;
   display: inline-block;
   vertical-align: middle;
+  cursor: url("https://i.imgur.com/OPyQDTr.png?2"), auto;
 }
 
 nav a {
@@ -28,12 +34,14 @@ nav a {
   padding: 20px;
   font-size: 1.2em;
   text-decoration: none;
+  cursor: url("https://i.imgur.com/OPyQDTr.png?2"), auto;
 }
 
 .navFav {
   position: absolute; 
   padding-right: 3rem;
   right: 0;
+  cursor: url("https://i.imgur.com/OPyQDTr.png?2"), auto;
 }
 
 .icon-list {
@@ -46,6 +54,7 @@ nav a {
   /* padding: 1rem; */
   vertical-align: center;
   align-items: center;
+  cursor: url("https://i.imgur.com/OPyQDTr.png?2"), auto;
 }
 .fav-list {
   display: grid;
@@ -77,14 +86,18 @@ nav a {
   text-align: center;
   /* min-width: 5rem; */
   max-width: 15rem;
-  cursor: pointer;
+}
+
+button:hover {
+  cursor: url("https://i.imgur.com/OPyQDTr.png?2"), auto;
 }
 
 .card:hover,
 .basic:hover {
   transform: translate3D(0, -1px, 0) scale(1.1);
   background-color: rgb(249, 188, 123);
-  transition: transform 0.5s
+  transition: transform 0.5s;
+  cursor: url("https://i.imgur.com/OPyQDTr.png?2"), auto;
 }
 
 .header {
