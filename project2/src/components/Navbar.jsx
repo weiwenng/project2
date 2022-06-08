@@ -18,7 +18,7 @@ const Navbar = () => {
             <Link to="/cruises"> <div className="navicon"><DirectionsBoat sx={{ fontSize: 20 }} /></div> Cruises</Link>
             <Link to="/walking_trail"> <div className="navicon"><ForestRounded sx={{ fontSize: 20 }} /></div> Walk-Walk</Link>
             <Link to="/accommodation"> <div className="navicon"><Hotel sx={{ fontSize: 20 }} /></div> Accoms</Link>
-            <Link to="/venue"> <div className="navicon"><LocationOnRounded sx={{ fontSize: 20 }} /></div> Accoms</Link>
+            <Link to="/venue"> <div className="navicon"><LocationOnRounded sx={{ fontSize: 20 }} /></div> Venue</Link>
             <Link to="/tour"> <div className="navicon"><TourRounded sx={{ fontSize: 20 }} /></div> Tours</Link>
             <FavoriteBorderRounded className="navFav"  onClick={() => navigate("/favourites")} />
         </nav>
