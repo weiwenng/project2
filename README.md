@@ -22,12 +22,12 @@ Website created using Vite and Material-UI using data fetched from [Tourism Info
 - [Vite](https://vitejs.dev/)
 - [Material UI](https://material-ui.com/)
 
-## Tourism Info Hub API
+<!-- ## Tourism Info Hub API
 
 You will need to register a developers account / businesses account to use their API. [Click here to go to their portal.](https://tih.stb.gov.sg/content/tih/en/home.html)
 
 - Content API
-
+ -->
 ## WireFrames
 
 #### Home Page
