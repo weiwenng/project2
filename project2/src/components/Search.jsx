@@ -26,7 +26,7 @@ const Search = ({ favs, handleFavs, removeFavs }) => {
   const [types, setTypes] = useState();
   const [search, setSearch] = useState();
   const API_KEY = import.meta.env.VITE_API_KEY;
-  const classes = useStyles();
+  const styleClass = useStyles();
   useEffect(() => {
     fetch(`https://tih-api.stb.gov.sg/content/v1/datasets?apikey=${API_KEY}`)
       .then((response) => response.json())
@@ -56,7 +56,7 @@ const Search = ({ favs, handleFavs, removeFavs }) => {
         <Autocomplete
           disablePortal
           id="categories"
-          className={classes.root}
+          className={styleClass.root}
           variant="filled"
           options={test}
           sx={{ width: 300, margin: "auto" }}
@@ -83,7 +83,7 @@ const Search = ({ favs, handleFavs, removeFavs }) => {
                 setValueCat(newValue);
               }}
               renderInput={(params) => (
-                <TextField value={types} {...params} className={classes.root} label="Types" />
+                <TextField value={types} {...params} className={styleClass.root} label="Types" />
               )}
             />
             <Button
