@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom";
-import { Card, CardContent, Typography } from "@mui/material";
 import {
   EventOutlined,
   LocalDiningRounded,
@@ -17,7 +15,7 @@ import Search from "../components/Search";
 import Icon from "../components/Icon";
 
 const Home = ({ favs, removeFavs, handleFavs }) => {
-  const navigate = useNavigate();
+
   return (
     <>
       <nav className="home">
